@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Bookshelf Apps</title>
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="py-2 text-center text-white col-12 bg-primary">
+          <h1>Bookshelf Apps</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container py-3 mt-4 table-bordered">
+        <form class="form" id="form" action="#">
+          <div class="text-center header">
+            <h2 class="text-primary">Masukkan Buku Baru</h2>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Judul</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Masukan judul buku "
+              id="title"
+              name="title"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Penulis</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Masukan nama penulis "
+              id="author"
+              name="author"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Tahun</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Masukan tahun terbit "
+              id="year"
+              name="year"
+              required
+            />
+          </div>
+         
+          <div class="form-group">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input type="checkbox" id="inputBookIsComplete" onclick="checkFinish()">
+          </div>
+          <button id="bookSubmit" type="submit" class="py-2 btn-primary btn-block">Masukkan Buku ke rak 
+              <span id="notComplete"><b>Belum selesai dibaca</b> </span>
+              <span id="isComplete" style="display: none;"> <b>Selesai dibaca</b> </span>
+          </button>
+        </form>
+      </div>
+    </main>
+    <section class="container py-3 mt-2 table-bordered">
+      <div class="text-left header">
+        <h3 class="text-primary">Belum selesai dibaca</h3>
+        <article class="px-2 py-3 " id="books">
+         
+        </article>
+      </div>
+    </section>
+    <section class="container py-3 mt-2 table-bordered">
+      <div class="text-left header">
+        <h3 class="text-primary">Selesai dibaca</h3>
+      </div>
+      <div id="incompleteBookshelfList" class="book_list">
+        <article class="px-2 py-3" id="completed-books">
+         
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+   
+  </body>
+</html>
